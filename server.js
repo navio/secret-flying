@@ -38,12 +38,12 @@ let up =
 var app = express()
 
 app.get('/', function (req, res) {
-  up().then((r)=>{ res.send(r) }) 
+  up().then((r)=>res.send(r)) 
 })
 
 app.get('/:city', function (req, res) {
   var term = req.params.city;
-  up(term).then((r)=>{ res.send(r) }) 
+  up(term).then((r)=>res.send(r)) 
 })
 
 app.listen(process.env.PORT, function () {
